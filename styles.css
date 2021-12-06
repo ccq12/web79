@@ -1,0 +1,66 @@
+
+h1{
+    background:rgb(218, 209, 209);
+    font-size:38px;
+    color:rgb(153, 80, 80);
+    }
+
+body {
+    display: flex;
+    
+    justify-content: center;
+}
+
+.todolist-panel {
+    width: 35em;
+    min-height: 25em;
+
+    border: 1px solid #bbb;
+    box-shadow: 2px 2px 2px #bbb;
+    background-image: url(2.jpg);
+}
+
+.input-pane {
+    display: flex;
+}
+
+.input-pane, .list-pane {
+    padding: 5px 1em;
+}
+
+.input-pane > input {
+    flex: 1 1 8em;
+}
+
+.list-pane > .todo-item {
+    display: flex;
+    margin: 0.5em 0;
+}
+
+.list-pane > .todo-item > .title {
+    flex: 1 1 8em;
+}
+
+.important-flag {
+    width: 1.5em;
+    text-align: center;
+    border: 1px solid #bbb;
+    color: #ccc;
+    font-size: 1em;
+    font-weight: 900;
+
+    user-select: none;
+}
+
+.important-flag.open {
+    color: red
+}
+
+.input-pane  #his-btn {
+
+}
+
+.input-pane  #his-btn.open {
+    background-color: blue;
+}
+
