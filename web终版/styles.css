@@ -1,0 +1,86 @@
+.title{ font-size:22px;
+text-align: center;}
+
+h1{
+    background:rgb(206, 202, 205);
+    font-size:38px;
+    color:rgb(153, 80, 80);
+    }
+
+body {
+    display: flex;
+    
+    justify-content: center;
+}
+
+.todolist-panel {
+    width: 35em;
+    min-height: 25em;
+    border-bottom:1px solid #ff0000;
+    border: 1px solid #bbb;
+    box-shadow: 2px 2px 2px #bbb;
+    background-image: url(2.jpg);
+}
+
+.input-pane {
+    display: flex;
+}
+
+.input-pane, .list-pane {
+    padding: 5px 1em;
+    
+}
+
+.input-pane > input {
+    flex: 1 1 8em;
+}
+
+.list-pane > .todo-item {
+    display: flex;
+    margin: 0.5em 0;
+    width:550px; height:50px; border:2px solid rgb(117, 51, 54);
+}
+
+.list-pane > .todo-item > .title {
+    flex: 1 1 8em;
+}
+
+.important-flag {
+    width: 1.5em;
+    text-align: center;
+    border: 1px solid #bbb;
+    color: rgb(187, 181, 181);
+    font-size: 1em;
+    font-weight: 900;
+
+    user-select: none;
+}
+
+.important-flag.open {
+    color: red;
+}
+
+.input-pane  #his-btn {
+
+}
+
+.input-pane  #his-btn.open {
+    background-color: blue;
+}
+
+.title{
+border-bottom:1px solid #110e0e;
+word-break: break-all;
+}
+
+.title.che{
+    text-decoration:line-through;
+    color: rgb(76, 189, 53);
+    background-image: url(完成.jpg);
+    background-repeat:no-repeat;
+}
+
+.title.imp{
+    background-image: url(狗.jpg)};
+
+ 
