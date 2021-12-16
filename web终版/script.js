@@ -45,7 +45,7 @@ function delitebyvaluesort(arr,text) {
     
     
 
-    function delitem(arr,text) {
+function delitem(arr,text) {
         //根据值来删除的函数 
         for (let i = 0; i < arr.length; i++) {
         
@@ -119,7 +119,8 @@ function renderTodoItemList(todoItems, finishedItems) {
 
         let titleEl = document.createElement("div");
         titleEl.className = "title";
-        titleEl.contentEditable="true"
+        titleEl.contentEditable="true" //让文档可以编辑
+
         //给事项的id赋值
         titleEl.id=i
 
@@ -227,14 +228,14 @@ function renderInputPane(todoItems) {
 
     addBtnEl.addEventListener("click", (e)=>{
         let inputEl = inputPaneEl.querySelector("input");
-        console.log(finishedid)
+        //console.log(finishedid)
         todoItems.push({
             title: inputEl.value,
             isFinished: false,
             isImportance: false, 
             
         })
-
+    
 
         
         //console.log("add a item: ", inputEl.value);
@@ -282,6 +283,17 @@ function renderInputPane(todoItems) {
 
     // let btnEl = document.querySelector("#todolist #add-btn");
 }
-
 renderInputPane(todoItems, finishedItems);
 renderTodoItemList(todoItems, finishedItems);
+
+let divmove=document.querySelector("#savebutton")
+    divmove.addEventListener("click",(e)=>{
+    for(let k=0;k<todoItems.length;k++){
+    let a=document.getElementById(k).innerText;
+    todoItems[k].title=a;    
+    console.log(todoItems)
+    }
+    renderTodoItemList(todoItems, finishedItems);
+    })
+
+

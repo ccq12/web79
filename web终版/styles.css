@@ -57,7 +57,7 @@ body {
 }
 
 .important-flag.open {
-    color: red;
+    color: rgb(161, 26, 71);
 }
 
 .input-pane  #his-btn {
@@ -81,6 +81,7 @@ word-break: break-all;
 }
 
 .title.imp{
-    background-image: url(狗.jpg)};
+    background-image: url(狗.jpg);
+    background-repeat:no-repeat;}
 
  
