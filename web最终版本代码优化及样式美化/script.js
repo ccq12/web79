@@ -1,3 +1,8 @@
+var time = new Date();
+var year=time.getFullYear(); //获取当前年份
+var month=time.getMonth(); 
+var day=time.getDate(); 
+let date=year+'年'+month+'月'+day+'日';
 
 let todoItems = []; //存放代办事项
 
@@ -12,7 +17,7 @@ function renderTodoItemList(todoItems, finishedItems) {
     //设置一个" "用于存放代码
     
     for (let i=0; i < todoItems.length; i++ ) {
-        let item = todoItems[i];
+        let item = todoItems[i]
         let itemDiv = document.createElement("div");
         //动态地创建div节点
         itemDiv.className = "todo-item";
@@ -25,7 +30,12 @@ function renderTodoItemList(todoItems, finishedItems) {
         
 
         inputEl.addEventListener("change", (e) => {
-            finishedItems.push(item);
+            item.isFinished=true
+            var s=inputEl.nextSibling.innerText+' || '+date
+            if(item.isFinished){
+            item.title=s
+            finishedItems.push(item)}
+            
             todoItems.splice(i, 1);
             alert('完成了一个任务')
             renderTodoItemList(todoItems, finishedItems)});
@@ -140,7 +150,7 @@ function renderInputPane(todoItems) {
         let inputEl = inputPaneEl.querySelector("input");  
         //console.log(finishedid)
         if(inputEl.value==""){
-            alert("请输入有效值")
+            alert("请输入有效文本")
         }else{
         todoItems.push({
             title: inputEl.value,

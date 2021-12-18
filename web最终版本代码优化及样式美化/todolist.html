@@ -2,20 +2,21 @@
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <style>
-    body{background-image: url(雪景.jpg);
+    body{background-image: url(浅黄.jpg);
         background-repeat: no-repeat;
-        background-size: 1500px;}
+        background-size: 1500px;
+        color: blue;}
   </style>
   <script>
   function changeStyle()
   {
   document.body.style.backgroundImage="url(浅黄.jpg)"
-  document.body.style.color="green"
+  document.body.style.color="black"
   }
   function changeStyle2()
   {
-  document.body.style.backgroundImage="url(雪景.jpg)"; 
-  document.body.style.color="black"
+  document.body.style.backgroundImage="url(皮卡丘.jpg)"; 
+  document.body.style.color="blue"
   var x=document.querySelectorAll(".important-flag")
   var i;
   for (i = 0; i < x.length; i++) {
@@ -27,15 +28,21 @@
   document.body.style.backgroundImage="url(星空.jpg)"; 
   document.body.style.color="white"
   }
+  function changeStyle4()
+  {
+  document.body.style.backgroundImage="url(2.jpg)"; 
+  document.body.style.color="black"
+  }
   </script>
   
 </head>
 
 <body>
 
-  <input type="button"input class="jpg" onclick="changeStyle()" value="浅黄" />
-  <input type="button"input class="jpg2" onclick="changeStyle2()" value="雪景" />
+  <input type="button"input class="jpg" onclick="changeStyle()" value="橘黄" />
+  <input type="button"input class="jpg2" onclick="changeStyle2()" value="卡通" />
   <input type="button"input class="jpg3" onclick="changeStyle3()" value="星空" />
+  <input type="button"input class="jpg4" onclick="changeStyle4()" value="沙丘" />
 
   <div id="todolist" class="todolist-panel">
     <h1 align="center">待办事项</h1>
