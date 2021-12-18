@@ -247,12 +247,15 @@ function renderInputPane(todoItems) {
     addBtnEl.addEventListener("click", (e)=>{
         let inputEl = inputPaneEl.querySelector("input");
         //console.log(finishedid)
+        if(inputEl.value==""){
+            alert("请输入有效值")
+        }else{
         todoItems.push({
             title: inputEl.value,
             isFinished: false,
             isImportance: false, 
             
-        })
+        })}
     
 
         
@@ -303,5 +306,3 @@ function renderInputPane(todoItems) {
 }
 renderInputPane(todoItems, finishedItems);
 renderTodoItemList(todoItems, finishedItems);
-
-
