@@ -1,0 +1,57 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <style>
+    body{background-image: url(雪景.jpg);
+        background-repeat: no-repeat;
+        background-size: 1500px;}
+  </style>
+  <script>
+  function changeStyle()
+  {
+  document.body.style.backgroundImage="url(浅黄.jpg)"
+  document.body.style.color="green"
+  }
+  function changeStyle2()
+  {
+  document.body.style.backgroundImage="url(雪景.jpg)"; 
+  document.body.style.color="black"
+  var x=document.querySelectorAll(".important-flag")
+  var i;
+  for (i = 0; i < x.length; i++) {
+  x[i].style.color="black";
+  }
+  }
+  function changeStyle3()
+  {
+  document.body.style.backgroundImage="url(星空.jpg)"; 
+  document.body.style.color="white"
+  }
+  </script>
+  
+</head>
+
+<body>
+
+  <input type="button"input class="jpg" onclick="changeStyle()" value="浅黄" />
+  <input type="button"input class="jpg2" onclick="changeStyle2()" value="雪景" />
+  <input type="button"input class="jpg3" onclick="changeStyle3()" value="星空" />
+
+  <div id="todolist" class="todolist-panel">
+    <h1 align="center">待办事项</h1>
+    <div class="input-pane">
+      <input type="text" >
+      <button id="add-btn">+</button>
+      <button id="his-btn">H</button>
+    </div>
+
+    <div class="list-pane">
+
+    </div>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

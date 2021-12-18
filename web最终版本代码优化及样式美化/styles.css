@@ -1,0 +1,173 @@
+
+
+h1{
+    background:rgb(206, 202, 205);
+    font-size:38px;
+    color:rgb(153, 80, 80);
+    margin-top: 0%;
+    }
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.todolist-panel {
+    width: 35em;
+    min-height: 25em;
+    min-width: 30em;
+    border-bottom:1px solid #ff0000;
+    border: 1px solid #bbb;
+    box-shadow: 2px 2px 2px #bbb;
+    overflow: scroll; 
+    
+    resize: horizontal;
+    flex-direction: column;
+    
+}
+
+.input-pane {
+    display: flex;
+}
+
+.input-pane, .list-pane {
+    padding: 5px 1em;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.input-pane > input {
+    flex: 1 1 8em;
+
+    padding: 6px 6px;
+    font-size: 25px;
+    font-family: 'STFangsong';
+    box-shadow: none;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #c4c7ce;
+    background: #fff;
+    color: #222;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.list-pane > .todo-item {
+    display: flex;
+    margin: 0.5em 0;
+    padding: 0.75em;
+    width:500px; height:35px; border:2px solid rgb(117, 51, 54);
+    overflow: auto; 
+    
+    border-radius: 10px
+
+    }
+    
+   
+
+.list-pane > .todo-item > .title {
+    flex: 1 1 8em;
+    word-break: break-all;
+    font-size:30px;
+    text-align: center;
+}
+
+.important-flag {
+    width: 1.5em;
+    text-align: center;
+    border: 3px solid rgb(192, 16, 60);
+    color: rgb(31, 184, 107);
+    font-size: 1em;
+    font-weight: 900;
+    user-select: none;   
+}
+.important-flag:hover{
+    background: rgb(136, 16, 32);
+}
+
+.important-flag.open {
+    color: rgb(161, 26, 71);
+}
+
+.input-pane  #his-btn {
+}
+
+.input-pane  #his-btn.open {
+    background-color: blue;
+}
+
+
+.todo-item:hover{
+    background: rgb(28, 102, 136);
+}
+.todo-item.important{
+    background-image: url("重要.jpg");
+}
+
+
+
+.title.important{
+    background-image: url(重要.jpg);
+    background-repeat:repeat;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+    background-color: #F5F5F5;
+  }
+
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    background-color: #c8c8c8;
+  }
+
+.jpg{
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 20;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #73AD21;
+   
+}
+.jpg2{
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 75;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #76a139;    
+}
+.jpg3{
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 130;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #73AD21;
+    
+}
+
+#add-btn{
+    border:3px solid #73AD21;
+}
+
+.check{
+    border: #76a139;
+}
+
